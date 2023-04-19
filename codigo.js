@@ -21,6 +21,3 @@ fetch(`https://dummyjson.com/products/search?q=${busquedaUsuario}`)
     .catch(err => console.error("error", err))
 console.log("Fin consulta - fetch")
   }
-
-  const element = document.getElementById("resultadoRapidez");
-  element.innerHTML = `La tarea resuelta más rápidamente fue ${taskRapida}`
