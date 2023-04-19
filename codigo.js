@@ -11,7 +11,7 @@ fetch(`https://dummyjson.com/products/search?q=${busquedaUsuario}`)
         res.products.forEach(actual => {
             const newElement = document.createElement("div");
             newElement.classList = "col"
-            newElement.innerHTML = `<div class="card" style="width: 18rem;"><img src="${actual.images[1]}" class="card-img-top" alt="${actual.title}"><div class="card-body"><h5 class="card-title">${actual.title}</h5><p class="card-text">${actual.description}</p><a href="https://www.amazon.com/s?k=${actual.title}" class="btn btn-primary">Comprar por ${actual.price}$ </a></div></div>`
+            newElement.innerHTML = `<div class="card" style="width: 18rem;"><img src="${actual.images[0]}" class="card-img-top" alt="${actual.title}"><div class="card-body"><h5 class="card-title">${actual.title}</h5><p class="card-text">${actual.description}</p><a href="https://www.amazon.com/s?k=${actual.title}" class="btn btn-primary">Comprar por ${actual.price}$ </a></div></div>`
             document.getElementById("gridResultados").appendChild(newElement) 
         }
         )
